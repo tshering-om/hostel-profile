@@ -841,6 +841,15 @@ setInterval(() => {
     activateTab('profile');
   }
 
+  document.getElementById('floor-filters').addEventListener('click', (e)=>{
+  const btn = e.target.closest('.chip');
+  if(!btn) return;
+  activeBlock = btn.dataset.floor;   // was btn.dataset.block
+  document.querySelectorAll('#floor-filters .chip').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active');
+  render();
+});
+
   function openMemberProfile(mem, idx){
     const [c1,c2] = paletteFor(mem.room);
     document.getElementById('back-label').textContent = 'Back to Members';

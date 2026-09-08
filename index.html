@@ -51,10 +51,66 @@
       </div>
 
       <div class="hero-visual">
-        <div class="hero-photo">
-          <img id="hero-slideshow" src="dh5.jpeg" alt="Sherubtse College">
-        </div>
-      </div>
+
+  <div class="hero-photo" id="hero-slideshow">
+
+    <img
+      src="dh5.jpeg"
+      alt="Sherubtse College"
+      class="hero-slide active"
+    >
+
+    <img
+      src="boedra_comp_1.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+
+    <img
+      src="mass_cleaning.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+
+    <img
+      src="dh-5.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+
+    <img
+      src="football.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+
+    <img
+      src="welcom.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+    
+    <img
+      src="new_president.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+  
+    <img
+      src="return.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+
+    <img
+      src="orientation.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+
+  </div>
+
+</div>
     </div>
 
     <div class="stat-strip">
@@ -472,43 +528,70 @@
     document.getElementById('tabs-mobile').classList.toggle('open');
   });
 
-  const heroImages = [
-  "dh5.jpeg",
-  "dh-5.jpg",
-  "football.jpg",
-  "welcom.jpg",
-  "return.jpg",
-  "orientation.jpg"
-];
+  /* ---------- HERO VERTICAL SLIDESHOW ---------- */
+
+const heroSlides = document.querySelectorAll(
+  "#hero-slideshow .hero-slide"
+);
 
 let heroIndex = 0;
-const heroImage = document.getElementById("hero-slideshow");
 
-setInterval(() => {
+const DISPLAY_TIME = 3000;
+const SLIDE_TIME = 400;
 
-  // Slide current image upward
-  heroImage.style.transform = "translateY(-100%)";
+function nextHeroSlide() {
 
+  const currentSlide = heroSlides[heroIndex];
+
+  const nextIndex =
+    (heroIndex + 1) % heroSlides.length;
+
+  const nextSlide = heroSlides[nextIndex];
+
+  /* Put the next image directly below the current image */
+  nextSlide.classList.remove("active");
+  nextSlide.classList.remove("exiting");
+
+  nextSlide.style.transition = "none";
+  nextSlide.style.transform = "translateY(100%)";
+
+  /*
+   * Force the browser to register the starting position
+   * before starting the animation.
+   */
+  nextSlide.offsetHeight;
+
+  /* Current image slides UP */
+  currentSlide.classList.remove("active");
+  currentSlide.classList.add("exiting");
+
+  /* Next image slides UP into the frame */
+  nextSlide.style.transition =
+    `transform ${SLIDE_TIME}ms cubic-bezier(0.65, 0, 0.35, 1)`;
+
+  nextSlide.classList.add("active");
+  nextSlide.style.transform = "translateY(0)";
+
+  /* Clean up after animation */
   setTimeout(() => {
 
-    // Change image
-    heroIndex = (heroIndex + 1) % heroImages.length;
-    heroImage.src = heroImages[heroIndex];
+    currentSlide.classList.remove("exiting");
 
-    // Instantly move new image below
-    heroImage.style.transition = "none";
-    heroImage.style.transform = "translateY(100%)";
+    currentSlide.style.transform =
+      "translateY(100%)";
 
-    // Force browser repaint
-    heroImage.offsetHeight;
+    currentSlide.style.transition = "";
 
-    // Slide new image upward
-    heroImage.style.transition = "transform 0.45s ease";
-    heroImage.style.transform = "translateY(0)";
+  }, SLIDE_TIME);
 
-  }, 450);
+  heroIndex = nextIndex;
+}
 
-}, 4000);
+
+/* Start slideshow */
+if (heroSlides.length > 1) {
+  setInterval(nextHeroSlide, DISPLAY_TIME);
+}
 
   /* ---------- MEMBER DATA ---------- */
   const passions = ["Photography","Basketball","Reading","Painting","Football","Chess","Debate","Music","Coding","Hiking","Dance","Volleyball","Poetry","Robotics","Badminton","Singing","Cricket","Yoga","Baking","Sketching"];
@@ -569,38 +652,38 @@ setInterval(() => {
 
   const members = [
     { name:'Phakchok Dolma', room:'1', course:'BSc in Mathematics', year:'Year 1', phone:'17483827', whatsapp:'97517483827', dob:'10 October 2007', passion:'Dancing', quote:'Be Positive' },
-    { name:'Tshering Pelden', room:'2', course:'BSc in Chemistry', year:'Year 1', phone:'77475031', whatsapp:'97577475031', dob:'1 August 2007', passion:'Dancing', quote:'-' },
-    { name:'Roma Ghalley', room:'2', course:'BSc in Chemistry', year:'Year 1', phone:'16114341', whatsapp:'97516114341', dob:'9 Febraury 2007', passion:'-', quote:'-' },
+    { name:'Tshering Pelden', room:'2', course:'BSc in Chemistry', year:'Year 1', phone:'77475031', whatsapp:'97577475031', dob:'1 August 2007', passion:'Dancing', quote:'Success is the sum of small efforts, repeated day in and day out.' },
+    { name:'Roma Ghalley', room:'2', course:'BSc in Chemistry', year:'Year 1', phone:'16114341', whatsapp:'97516114341', dob:'9 Febraury 2007', passion:'-', quote:'There are no shortcuts to any place worth going.' },
     { name:'Chhimi Om Doya', room:'2', course:'DSDA', year:'Year 1', phone:'17744055', whatsapp:'97517744055', dob:'28 December 2007', passion:'Drawing', quote:'Among flowers, the cherry blossom; among people, the warrior.' },
     { name:'Chimi Zangmo Norbu', room:'3', course:'BSc in Chemistry', year:'Year 1', phone:'17233340', whatsapp:'97517233340', dob:'20 August 2006', passion:'Phtotography and playing badminton', quote:'Life is simple but we make it complicated' },
-    { name:'Tshering Choden', room:'3', course:'BSc in Chemistry', year:'Year 1', phone:'17973784', whatsapp:'97517973784', dob:'7 July 2007', passion:'Travelling', quote:'-' },
-    { name:'Phuntsho Wangmo', room:'3', course:'DSDA', year:'Year 1', phone:'17889569', whatsapp:'97517889569', dob:'7 December 2006', passion:'-', quote:'-' },
-    { name:'Dechen Shingdan', room:'4', course:'BSc in Life Science', year:'Year 1', phone:'17842476', whatsapp:'97517842476', dob:'-', passion:'-', quote:'-' },
+    { name:'Tshering Choden', room:'3', course:'BSc in Chemistry', year:'Year 1', phone:'17973784', whatsapp:'97517973784', dob:'7 July 2007', passion:'Travelling', quote:'It always seems impossible until it\'s done.' },
+    { name:'Phuntsho Wangmo', room:'3', course:'DSDA', year:'Year 1', phone:'17889569', whatsapp:'97517889569', dob:'7 December 2006', passion:'Reading', quote:'An investment in knowledge pays the best interest.' },
+    { name:'Dechen Shingdan', room:'4', course:'BSc in Life Science', year:'Year 1', phone:'17842476', whatsapp:'97517842476', dob:'24 May 2006', passion:'Playing Football', quote:'The secret of getting ahead is getting started.' },
     { name:'Tshering Yangzom', room:'4', course:'BSc in Life Science', year:'Year 1', phone:'77616079', whatsapp:'97577616079', dob:'8 July 2006', passion:'watching dramas and movies', quote:'Love yourself first!' },
-    { name:'Nima Zangmo', room:'5', course:'BSc in Chemistry', year:'Year 1', phone:'17368830', whatsapp:'97517368830', dob:'19 Febraury 2006', passion:'-', quote:'-' },
-    { name:'Tashi Wangmo', room:'5', course:'BSc in Mathematics', year:'Year 1', phone:'17678065', whatsapp:'97517678065', dob:'6 June 2007', passion:'-', quote:'-' },
+    { name:'Nima Zangmo', room:'5', course:'BSc in Chemistry', year:'Year 1', phone:'17368830', whatsapp:'97517368830', dob:'19 Febraury 2006', passion:'Reading', quote:'Small steps every day lead to big results.' },
+    { name:'Tashi Wangmo', room:'5', course:'BSc in Mathematics', year:'Year 1', phone:'17678065', whatsapp:'97517678065', dob:'6 June 2007', passion:'Dancing', quote:'Enjoy the little things in life' },
     { name:'Manisha Rai', room:'6', course:'BSc in Chemistry', year:'Year 1', phone:'17537920', whatsapp:'97517537920', dob:'25 January 2006', passion:'Travelling', quote:'Romanticizing my little life.' },
-    { name:'Sarita Subba', room:'6', course:'BSc in Physics', year:'Year 1', phone:'17328454', whatsapp:'97517328454', dob:'16 March 2007', passion:'dancing and watching drama', quote:'Be good' },
-    { name:'Kalpana Rai', room:'6', course:'BSc in Physics', year:'Year 1', phone:'17744715', whatsapp:'97517744715', dob:'13 September 2005', passion:'-', quote:'-' },
-    { name:'Pema Wangmo', room:'7', course:'BSc in Life Science', year:'Year 1', phone:'17913078', whatsapp:'97517913078', dob:'22 June 2004', passion:'Travelling', quote:'-' },
-    { name:'Pema Tshomo', room:'7', course:'BSc in Life Science', year:'Year 1', phone:'77712847', whatsapp:'97577712847', dob:'-', passion:'-', quote:'-' },
-    { name:'Tshering Yangchen', room:'7', course:'BSc in Life Science', year:'Year 1', phone:'77634400', whatsapp:'97577634400', dob:'-', passion:'-', quote:'-' },
+    { name:'Sarita Subba', room:'6', course:'BSc in Physics', year:'Year 1', phone:'17328454', whatsapp:'97517328454', dob:'16 March 2007', passion:'Dancing | Watching drama', quote:'Be good' },
+    { name:'Kalpana Rai', room:'6', course:'BSc in Physics', year:'Year 1', phone:'17744715', whatsapp:'97517744715', dob:'13 September 2005', passion:'Travelling | Games', quote:'Focus on being productive instead of busy.' },
+    { name:'Pema Wangmo', room:'7', course:'BSc in Life Science', year:'Year 1', phone:'17913078', whatsapp:'97517913078', dob:'22 June 2004', passion:'Travelling', quote:'Don\'t wish it were easier. Wish you were better.' },
+    { name:'Pema Tshomo', room:'7', course:'BSc in Life Science', year:'Year 1', phone:'77712847', whatsapp:'97577712847', dob:'19 December 2006', passion:'Dancing', quote:'Be yourself; everyone else is already taken.' },
+    { name:'Tshering Yangchen', room:'7', course:'BSc in Life Science', year:'Year 1', phone:'77634400', whatsapp:'97577634400', dob:'10 July 2007', passion:'Reading | Dancing', quote:'It always seems impossible until it\'s done.' },
     { name:'Dorji Zangmo', room:'9', course:'BSc in Life Science', year:'Year 1', phone:'17713411', whatsapp:'97517713411', dob:'1 December 2006', passion:'esports and raising animals', quote:'Coexist with Passion.' },
-    { name:'Tshewang Choden', room:'9', course:'BSc in Life Science', year:'Year 1', phone:'17467085', whatsapp:'97517467085', dob:'-', passion:'-', quote:'-' },
-    { name:'Pema Lhaden', room:'9', course:'BSc in Physics', year:'Year 1', phone:'77712744', whatsapp:'97577712744', dob:'-', passion:'Reading', quote:'-' },
-    { name:'Tshelthrim Lhamo', room:'10', course:'BSc in Chemistry', year:'Year 1', phone:'17768517', whatsapp:'97517768517', dob:'-', passion:'-', quote:'-' },
-    { name:'Jigme Yozer Wangmo', room:'10', course:'BSc in Life Science', year:'Year 1', phone:'77397716', whatsapp:'97577397716', dob:'-', passion:'-', quote:'-' },
-    { name:'Needha Zangmo', room:'11', course:'BSc in Life Science', year:'Year 1', phone:'17685046', whatsapp:'97517685046', dob:'31 October 2006', passion:'-', quote:'-' },
-    { name:'Roshni Ghalley', room:'11', course:'BSc in Life Science', year:'Year 1', phone:'17507577', whatsapp:'97517507577', dob:'-', passion:'-', quote:'-' },
-    { name:'Tshering Tshomo', room:'11', course:'BSc in Chemistry', year:'Year 1', phone:'17341272', whatsapp:'97517341272', dob:'18 September 2006', passion:'-', quote:'-' },
-    { name:'Karma Yangdon', room:'12', course:'BSc in Chemistry', year:'Year 1', phone:'77675529', whatsapp:'97577675529', dob:'29 April 2007', passion:'-', quote:'-' },
-    { name:'Tshechi Lhamo', room:'12', course:'BSc in Mathematics', year:'Year 1', phone:'16123441', whatsapp:'97516123441', dob:'-', passion:'-', quote:'-' },
+    { name:'Tshewang Choden', room:'9', course:'BSc in Life Science', year:'Year 1', phone:'17467085', whatsapp:'97517467085', dob:'18 June 2006', passion:'Playing Games', quote:'Do one thing daily that scares you.' },
+    { name:'Pema Lhaden', room:'9', course:'BSc in Physics', year:'Year 1', phone:'77712744', whatsapp:'97577712744', dob:'4 November 2004', passion:'Reading', quote:'Happiness is a choice.' },
+    { name:'Tshelthrim Lhamo', room:'10', course:'BSc in Chemistry', year:'Year 1', phone:'17768517', whatsapp:'97517768517', dob:'22 October 2007', passion:'Online Gaming', quote:' Go along with the flow 😘' },
+    { name:'Jigme Yozer Wangmo', room:'10', course:'BSc in Life Science', year:'Year 1', phone:'77397716', whatsapp:'97577397716', dob:'2 April 2008', passion:'Socializing', quote:'Wherever you are, be all there.' },
+    { name:'Needha Zangmo', room:'11', course:'BSc in Life Science', year:'Year 1', phone:'17685046', whatsapp:'97517685046', dob:'31 October 2006', passion:'Hiking', quote:'When you feel like you’re drowning, remember your lifeguard walks on water.' },
+    { name:'Roshni Ghalley', room:'11', course:'BSc in Life Science', year:'Year 1', phone:'17507577', whatsapp:'97517507577', dob:'-', passion:'-', quote:'You don’t have to have it all figured out—just take the next faithful step.' },
+    { name:'Tshering Tshomo', room:'11', course:'BSc in Chemistry', year:'Year 1', phone:'17341272', whatsapp:'97517341272', dob:'18 September 2006', passion:'Reading', quote:'You can’t wear your old identity and walk in your new one.' },
+    { name:'Karma Yangdon', room:'12', course:'BSc in Chemistry', year:'Year 1', phone:'77675529', whatsapp:'97577675529', dob:'29 April 2007', passion:'Dancing', quote:'Life is really simple, but we insist on making it complicated.' },
+    { name:'Tshechi Lhamo', room:'12', course:'BSc in Mathematics', year:'Year 1', phone:'16123441', whatsapp:'97516123441', dob:'14 December 2004', passion:'Listening to Music', quote:'The happiness of your life depends on the quality of your thoughts.' },
     { name:'Tashi Yangzom', room:'13', course:'BSc in Life Science', year:'Year 1', phone:'77810883', whatsapp:'97577810883', dob:'23 May 2006', passion:'Dancing, nail tech and bartender ', quote:'Grow & Glow.' },
     { name:'Diya Sharma', room:'13', course:'BSc in Life Science', year:'Year 1', phone:'17751271', whatsapp:'97517751271', dob:'26 July 2007', passion:'Reading', quote:'Still becoming' },
     { name:'Junu Tamang', room:'13', course:'BSc in Physics', year:'Year 1', phone:'77439901', whatsapp:'97577439901', dob:'5 September 2006', passion:'Learning Guiter', quote:'Bloom Anyway' },
-    { name:'Deki Choden', room:'14', course:'BSc in Life Science', year:'Year 1', phone:'17719325', whatsapp:'97517719325', dob:'-', passion:'-', quote:'-' },
-    { name:'Dawa Yangki', room:'14', course:'DSDA', year:'Year 1', phone:'16123213', whatsapp:'97516123213', dob:'-', passion:'-', quote:'-' },
-    { name:'Dechen Yuden', room:'14', course:'DSDA', year:'Year 1', phone:'77683666', whatsapp:'97577683666', dob:'-', passion:'-', quote:'-' },
+    { name:'Deki Chedon', room:'14', course:'BSc in Life Science', year:'Year 1', phone:'17719325', whatsapp:'97517719325', dob:'-', passion:'-', quote:'If you want to fly, you have to give up what weighs you down.' },
+    { name:'Dawa Yangki', room:'14', course:'DSDA', year:'Year 1', phone:'16123213', whatsapp:'97516123213', dob:'-', passion:'-', quote:'Small daily improvements over time lead to stunning results.' },
+    { name:'Dechen Yuden', room:'14', course:'DSDA', year:'Year 1', phone:'77683666', whatsapp:'97577683666', dob:'-', passion:'-', quote:'Life shrinks or expands in proportion to one\'s courage' },
     { name:'Dawa Choden', room:'16', course:'BSc in Chemistry', year:'Year 3', phone:'17366758', whatsapp:'97517366758', dob:'15 May 2005', passion:'Cooking', quote:'Care yourself FIRST ladies' },
     { name:'Karma Deki', room:'17', course:'BSc in Mathematics', year:'Year 1', phone:'17924542', whatsapp:'97517924542', dob:'1 May 2006', passion:'Sports', quote:'Be Yourself' },
     { name:'Sangay Chom', room:'17', course:'BSc in Mathematics', year:'Year 1', phone:'17556602', whatsapp:'97517556602', dob:'4 August 2006', passion:'Writing', quote:'Keep Going.' },
@@ -618,9 +701,9 @@ setInterval(() => {
     { name:'Ngawang Choden', room:'23', course:'BSc in Mathematics', year:'Year 1', phone:'17482026', whatsapp:'97517482026', dob:'5 September 2006', passion:'Singing and playing guitar.', quote:'your presence matter' },
     { name:'Yangchen Lhamo', room:'24', course:'BSc in Life Science', year:'Year 1', phone:'17683085', whatsapp:'97517683085', dob:'7 March 2008', passion:'Hiking', quote:'what\'s meant to be will always find its way' },
     { name:'Rigsel Yangki Dorji', room:'24', course:'BSc in Life Science', year:'Year 1', phone:'17254471', whatsapp:'97517254471', dob:'10 April 2009', passion:'Travelling and Reading', quote:'What is done in love, is done well.' },
-    { name:'Thinley Zangmo', room:'25', course:'BSc in Mathematics', year:'Year 1', phone:'77728591', whatsapp:'97577728591', dob:'-', passion:'-', quote:'-' },
+    { name:'Thinley Zangmo', room:'25', course:'BSc in Mathematics', year:'Year 1', phone:'77728591', whatsapp:'97577728591', dob:'16 january 2007', passion:'Outdoor Games', quote:'The journey of a thousand miles begins with a single step.' },
     { name:'Pema Wangmo', room:'25', course:'BSc in Physics', year:'Year 1', phone:'17542501', whatsapp:'97517542501', dob:'14 December 2006', passion:'Playing guitar & reading ', quote:'Be Humble' },
-    { name:'Kinley Lhaden', room:'26', course:'BSc in Life Science', year:'Year 1', phone:'77608735', whatsapp:'97577608735', dob:'-', passion:'-', quote:'-' },
+    { name:'Kinley Lhaden', room:'26', course:'BSc in Life Science', year:'Year 1', phone:'77608735', whatsapp:'97577608735', dob:'14 December 2006', passion:'Acting|Speaking|Dancing.', quote:'Life itself is the most wonderful fairy tale.' },
     { name:'Dechen Dema', room:'26', course:'DSDA', year:'Year 1', phone:'77414720', whatsapp:'97577414720', dob:'10 April 2007', passion:'Reading and Dancing.', quote:'Just take one step.' },
     { name:'Pem Lham', room:'26', course:'DSDA', year:'Year 1', phone:'17444788', whatsapp:'97517444788', dob:'6 October 2006', passion:'Reading', quote:'Taking a step back doesnt always make you a loser.' },
     { name:'Ugyen Choden', room:'27', course:'BSc in Physics', year:'Year 1', phone:'77976171', whatsapp:'97577976171', dob:'22 August 2006', passion:'Anime & Cooking', quote:'Shared joy is double joy.' },
@@ -628,10 +711,10 @@ setInterval(() => {
     { name:'Kezang Cheki', room:'27', course:'DSDA', year:'Year 1', phone:'77279429', whatsapp:'97577279429', dob:'29 October 2007', passion:'-', quote:'Just Survive' },
     { name:'Kinzang Lhamo', room:'28', course:'BSc in Physics', year:'Year 1', phone:'17332503', whatsapp:'97517332503', dob:'30 June 2007', passion:'Reading', quote:'Anything you do to survive is brave.' },
     { name:'Tshering Lhaden', room:'28', course:'BSc in Physics', year:'Year 1', phone:'17376495', whatsapp:'97517376495', dob:'21 October 2007', passion:'Reading', quote:'"The earth has music for those who listen." ~ Shakespeare' },
-    { name:'Passang Lhamo Lepcha', room:'28', course:'DSDA', year:'Year 1', phone:'77848149', whatsapp:'97577848149', dob:'19 May 2006', passion:'Drawing|Sports|Painting ', quote:'"Everything has beauty, but not everyone sees it " ~ CONFUCIUS' },
+    { name:'Passang Lhamo Lepcha', room:'28', course:'DSDA', year:'Year 1', phone:'77848149', whatsapp:'97577848149', dob:'19 May 2006', passion:'Drawing|Sports|Painting ', quote:'Everything has beauty, but not everyone sees it.' },
     { name:'Sangeeta Chhetri', room:'29', course:'BSc in Life Science', year:'Year 1', phone:'17505309', whatsapp:'97517505309', dob:'21 June 2006', passion:'Travelling & Reading', quote:'Bloom at your own pace' },
-    { name:'Pema Yangki', room:'29', course:'BSc in Physics', year:'Year 1', phone:'17833296', whatsapp:'97517833296', dob:'-', passion:'-', quote:'-' },
-    { name:'Karma Choden', room:'29', course:'BSc in Physics', year:'Year 1', phone:'16139160', whatsapp:'97516139160', dob:'-', passion:'-', quote:'-' },
+    { name:'Pema Yangki', room:'29', course:'BSc in Physics', year:'Year 1', phone:'17833296', whatsapp:'97517833296', dob:'3 December 1997', passion:'Indoor Games | E-sports', quote:'You only live once, but if you do it right, once is enough.' },
+    { name:'Karma Choden', room:'29', course:'BSc in Physics', year:'Year 1', phone:'16139160', whatsapp:'97516139160', dob:'29 October 2006', passion:'Reading', quote:'You don’t have to earn rest; it belongs to you simply because you exist.' },
   ];
 
   // 👇 REPLACE THESE WITH YOUR ACTUAL PHOTO PATHS, one per resident, in the SAME ORDER as the roster above.
@@ -659,7 +742,7 @@ setInterval(() => {
     'image/tshewang_choden.jpg',  // Tshewang Choden — Room 9
     'image/pema_lhaden.jpg',  // Pema Lhaden — Room 9
     'image/tshelthrim_lhamo.jpeg',  // Tshelthrim Lhamo — Room 10
-    'images/jigme_yozer_wangmo.jpg',  // Jigme Yozer Wangmo — Room 10
+    'image/jigme_yozer_wangmo.jpeg',  // Jigme Yozer Wangmo — Room 10
     'image/needha_zangmo.jpg',  // Needha Zangmo — Room 11
     'image/roshni_ghalley.jpg',  // Roshni Ghalley — Room 11
     'image/tshering_tshomo.jpg',  // Tshering Tshomo — Room 11
@@ -701,7 +784,7 @@ setInterval(() => {
     'image/passang_lhamo_lepcha.jpeg',  // Passang Lhamo Lepcha — Room 28
     'image/sangeeta_chhetri.jpg',  // Sangeeta Chhetri — Room 29
     'image/pema_yangki.jpg',  // Pema Yangki — Room 29
-    'image/karma-choden.jpg',  // Karma Choden — Room 29
+    'image/karma_choden.jpg',  // Karma Choden — Room 29
   ];
   members.forEach((mem, i) => { mem.photo = realPhotos[i] || ''; });
 

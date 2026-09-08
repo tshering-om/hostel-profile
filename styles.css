@@ -128,19 +128,100 @@
   .btn-ghost{background:transparent; color:#F3EEE1; border:1px solid rgba(255,255,255,.25);}
   .btn-ghost:hover{border-color:var(--brass-light); color:var(--brass-light);}
 
-  /* photo + key-tag, layered */
-  .hero-visual{max-width:500px; margin:0 auto;}
-  .hero-photo{
-    border-radius:20px; overflow:hidden; transform:rotate(2.5deg);
-    box-shadow:0 26px 50px -18px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.08);
-    aspect-ratio:4/3; position:relative;
-  }
-  .hero-photo img{width:100%; height:100%; object-fit:cover; display:block; transform:translateY(0); transition:transform .45s ease;}
-  .hero-photo::after{
-    content:''; position:absolute; inset:0;
-    background:linear-gradient(190deg, rgba(27,42,65,0) 45%, rgba(27,42,65,.55) 100%);
-    pointer-events:none;
-  }
+  /* ==============================
+   HERO SLIDESHOW
+   ============================== */
+
+.hero-visual {
+  width: 100%;
+  max-width: 500px;
+  height: 375px;
+  margin: 0 auto;
+}
+
+.hero-photo {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  /* REMOVE THE TILT */
+  transform: none;
+
+  border-radius: 20px;
+
+  background: #1b2a41;
+
+  box-shadow:
+    0 26px 50px -18px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+
+/* Every slide fills the SAME frame */
+.hero-slide {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  opacity: 1;
+
+  transform: translateY(100%);
+
+  z-index: 1;
+
+  will-change: transform;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+
+/* Currently visible image */
+.hero-slide.active {
+  transform: translateY(0);
+
+  z-index: 2;
+}
+
+
+/* Previous image moving UP */
+.hero-slide.exiting {
+  transform: translateY(-100%);
+
+  z-index: 1;
+}
+
+
+/* Dark gradient overlay */
+.hero-photo::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  background:
+    linear-gradient(
+      190deg,
+      rgba(27, 42, 65, 0) 45%,
+      rgba(27, 42, 65, 0.55) 100%
+    );
+
+  pointer-events: none;
+}
 
   /* the key-tag signature graphic */
   .keytag{

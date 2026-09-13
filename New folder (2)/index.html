@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Degree Hall 5 — Residence Directory</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,6 +13,7 @@
     <header>
   <div class="nav-wrap">
     <div class="brand">
+      <div class="brand-mark">5</div>
       <div>
         <div class="brand-name">Degree Hall V</div>
         <div class="brand-sub">Residence Directory</div>
@@ -24,7 +24,6 @@
       <button class="tab-btn" data-tab="about">About</button>
       <button class="tab-btn" data-tab="staff">Staff</button>
       <button class="tab-btn" data-tab="members">Members</button>
-      <button class="tab-btn" data-tab="engage">Engage</button>
     </nav>
     <button class="burger" id="burger" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -35,7 +34,6 @@
     <button data-tab="about">About</button>
     <button data-tab="staff">Staff</button>
     <button data-tab="members">Members</button>
-    <button data-tab="engage">Engage</button>
   </div>
 </header>
 <!-- ============ HOME ============ -->
@@ -53,23 +51,72 @@
       </div>
 
       <div class="hero-visual">
+
   <div class="hero-photo" id="hero-slideshow">
-    <img src="dh5.jpeg" alt="Sherubtse College" class="hero-slide active">
-    <img src="mass_cleaning.jpg" alt="Sherubtse College" class="hero-slide">
-    <img src="dh-5.jpg" alt="Sherubtse College" class="hero-slide">
-    <img src="football.jpg" alt="Sherubtse College" class="hero-slide">
-    <img src="welcom.jpg" alt="Sherubtse College" class="hero-slide">
-    <img src="new_president.jpg" alt="Sherubtse College" class="hero-slide">
-    <img src="return.jpg" alt="Sherubtse College" class="hero-slide">
-    <img src="orientation.jpg" alt="Sherubtse College" class="hero-slide">
+
+    <img
+      src="dh5.jpeg"
+      alt="Sherubtse College"
+      class="hero-slide active"
+    >
+
+    <img
+      src="boedra_comp_1.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+
+    <img
+      src="mass_cleaning.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+
+    <img
+      src="dh-5.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+
+    <img
+      src="football.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+
+    <img
+      src="welcom.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+    
+    <img
+      src="new_president.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+  
+    <img
+      src="return.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+
+    <img
+      src="orientation.jpg"
+      alt="Sherubtse College"
+      class="hero-slide"
+    >
+
   </div>
+
 </div>
     </div>
 
     <div class="stat-strip">
       <div class="stat-cell"><div class="num">1</div><div class="lbl">Hostel SSO</div></div>
       <div class="stat-cell"><div class="num">2</div><div class="lbl">Resident Leaders</div></div>
-      <div class="stat-cell"><div class="num">64</div><div class="lbl">Residents</div></div>
+      <div class="stat-cell"><div class="num">66</div><div class="lbl">Residents</div></div>
       <div class="stat-cell"><div class="num">29</div><div class="lbl">Rooms Total</div></div>
     </div>
   </div>
@@ -98,12 +145,6 @@
         <h4>Resident Directory</h4>
         <p>Search all 64 residents by name, room, or floor — every nameplate, in one searchable board.</p>
         <a class="more" data-tab="members" href="#">Open directory →</a>
-      </div>
-      <div class="teaser-card" style="border-color:var(--purple); background:linear-gradient(150deg,#fff,#faf7ff);">
-        <div class="ico" style="background:linear-gradient(150deg,var(--purple-light),var(--purple));">💬</div>
-        <h4>Feedback Sessions</h4>
-        <p>Share concerns, suggestions, and ideas with the SSO and RLs — every voice counts.</p>
-        <a class="more" data-tab="engage" href="#" style="color:var(--purple);">Open feedback →</a>
       </div>
     </div>
   </div>
@@ -154,7 +195,7 @@
         </div>
         <div class="facts-desc">
           <div class="f-label">Description</div>
-          <p>Constructed by the DANTAK Project with funding from the Government of India at a cost of <b>Nu. 3,935,155</b>, and renovated in <b>2010</b> by M/s Tshering Construction at a cost of <b>Nu. 865,074.94</b>.</p>
+          <p>Constructed by the DANTAK Project with funding from the Government of India at a cost of Nu. 3,935,155, and renovated in 2010 by M/s Tshering Construction at a cost of Nu. 865,074.94.</p>
         </div>
       </div>
 
@@ -173,21 +214,23 @@
         <div class="facil-card">
           <div class="ico">🏠</div>
           <h4>Common Room</h4>
-          <p>A shared room designed for building community.</p>
+          <p>A shared social lounge designed for building community.</p>
         </div>
         <div class="facil-card">
           <div class="ico">🍽️</div>
           <h4>Mess & Dining</h4>
-          <p>Hygienic and wholesome daily meals served from the mess.</p>
+          <p>Hygienic and wholesome daily meals served from the kitchen.</p>
         </div>
         <div class="facil-card">
           <div class="ico">🎯</div>
           <h4>First Aid</h4>
-          <p>Emergency medical supplies and immediate basic care accessible 24/7.</p>
+          <p>Fully stocked emergency medical supplies and immediate basic care accessible 24/7.</p>
         </div>
       </div>
     </div>
   </div>
+
+  
 
   <div class="values-band wrap">
     <div class="section-head">
@@ -243,7 +286,7 @@
         <div class="staff-meta">
           Office: Faculty Block 1, <span class="mono">Ground Floor</span><br>
           Hours: <span class="mono">Mon–Fri, 9:00–16:30</span><br>
-          Handles student welfare, guidance, discipline, residential issues, and coordination between residents and college authorities.
+          Handles: welfare, escalations, external liaison
         </div>
          <div class="contact-line">
           <a class="wa-icon" href="https://wa.me/97517348960" target="_blank" rel="noopener" title="Message on WhatsApp" onclick="event.stopPropagation();">
@@ -254,14 +297,14 @@
         <span class="view-hint">View profile →</span>
       </div>
 
-      <div class="staff-card leader" data-staff-id="tshering">
+      <div class="staff-card leader" data-staff-id="alex">
         <span class="role-chip leaderchip">Leader</span>
-        <div class="avatar"><img src="image/tshering_om.jpg" alt="Ms. Tshering Om" onerror="this.onerror=null;this.src='https://api.dicebear.com/9.x/notionists/svg?seed=tshering&backgroundColor=4C6B52,31473A&backgroundType=gradientLinear';"></div>
+        <div class="avatar"><img src="image/tshering_om.jpg" alt="Ms. Tshering Om" onerror="this.onerror=null;this.src='https://api.dicebear.com/9.x/notionists/svg?seed=alex&backgroundColor=4C6B52,31473A&backgroundType=gradientLinear';"></div>
         <h3>Ms. Tshering Om</h3>
         <div class="staff-role">Resident Leader</div>
         <div class="staff-meta">
           DSDA &bull; Year 4<br>
-          Oversees residents’ wellbeing, cleanliness, discipline, participation, and day-to-day hostel concerns while supporting the SSO.
+          Oversees: member welfare & welfare activities
         </div>
         <div class="contact-line">
           <a class="wa-icon" href="https://wa.me/97517468810" target="_blank" rel="noopener" title="Message on WhatsApp" onclick="event.stopPropagation();">
@@ -272,14 +315,14 @@
         <span class="view-hint">View profile →</span>
       </div>
 
-      <div class="staff-card leader" data-staff-id="chimi">
+      <div class="staff-card leader" data-staff-id="david">
         <span class="role-chip leaderchip">Leader</span>
-        <div class="avatar"><img src="image/chimi.jpeg" alt="Ms. Chimi Lhamo Lama" onerror="this.onerror=null;this.src='https://api.dicebear.com/9.x/notionists/svg?seed=chimi&backgroundColor=4C6B52,31473A&backgroundType=gradientLinear';"></div>
+        <div class="avatar"><img src="image/chimi.jpeg" alt="Alex Morgan" onerror="this.onerror=null;this.src='https://api.dicebear.com/9.x/notionists/svg?seed=alex&backgroundColor=4C6B52,31473A&backgroundType=gradientLinear';"></div>
         <h3>Ms. Chimi Lhamo Lama</h3>
         <div class="staff-role">Resident Leader</div>
         <div class="staff-meta">
           BSc in Life Science &bull; Year 3<br>
-          Oversees residents’ wellbeing, cleanliness, discipline, participation, and day-to-day hostel concerns while supporting the SSO.
+          Oversees: member welfare & welfare activities
         </div>
         <div class="contact-line">
           <a class="wa-icon" href="https://wa.me/97577798943" target="_blank" rel="noopener" title="Message on WhatsApp" onclick="event.stopPropagation();">
@@ -337,122 +380,6 @@
   </div>
 </section>
 
-<!-- ============ ENGAGE (Feedback + Budget) ============ -->
-<section class="panel" id="panel-engage">
-  <div class="engage-hero">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Resident Engagement</span>
-        <h2>Feedback & Budget Collection</h2>
-        <p>Your voice shapes this house. Share feedback, ideas, and support the community fund.</p>
-      </div>
-
-      <!-- FEEDBACK SESSIONS -->
-      <div class="engage-block">
-        <div class="engage-header">
-          <div class="engage-icon feedback-icon">💬</div>
-          <div>
-            <h3>Feedback Sessions</h3>
-            <p class="engage-sub">Structured time for residents to voice concerns, ideas, and suggestions to the SSO and Resident Leaders.</p>
-          </div>
-        </div>
-
-        <div class="feedback-grid">
-          <a class="feedback-card feedback-card-link" href="https://forms.gle/SpKwJFCGRrJvB9cy9" target="_blank" rel="noopener" title="Open the Feedback Form">
-            <div class="fb-date">Anytime · Online</div>
-            <h4>Feedback Form</h4>
-            <p>Share concerns, suggestions, or praise through our online form — quick, private, and open 24/7.</p>
-            <span class="fb-tag">Open form →</span>
-          </a>
-
-          <div class="feedback-card">
-            <div class="fb-date">Direct</div>
-            <h4>WhatsApp or Email</h4>
-            <p>Reach SSO (Deki Dema) or your RLs directly for immediate or sensitive matters. Response within 24 hours.</p>
-            <span class="fb-tag">Direct line</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- BUDGET COLLECTION -->
-      <div class="engage-block">
-        <div class="engage-header">
-          <div class="engage-icon budget-icon">💰</div>
-          <div>
-            <h3>Budget Collection</h3>
-            <p class="engage-sub">Transparent collection of the hostel welfare fund, used for events, upkeep, and shared amenities.</p>
-          </div>
-        </div>
-
-        <div class="budget-summary">
-          <div class="budget-stat">
-            <div class="bs-label">Annually Contribution</div>
-            <div class="bs-value">Nu. 350 <span>/ resident</span></div>
-          </div>
-          <div class="budget-stat">
-            <div class="bs-label">Total Collected (This Year)</div>
-            <div class="bs-value mono">Nu. 21,700</div>
-          </div>
-          <div class="budget-stat">
-            <div class="bs-label">Transparency</div>
-            <div class="bs-value">Ledger open to all</div>
-          </div>
-          <div class="budget-stat">
-            <div class="bs-label">Collection Deadline</div>
-            <div class="bs-value mono">September</div>
-          </div>
-        </div>
-
-        <div class="budget-details">
-          <div class="budget-col">
-            <h4>Where the fund goes</h4>
-            <ul class="budget-list">
-              <li><span class="bl-dot" style="background:#7048e8;"></span> Hostel events like sports.</li>
-              <li><span class="bl-dot" style="background:#f76707;"></span> Hostel property maintenances like electricity</li>
-              <li><span class="bl-dot" style="background:#2e7d32;"></span> SUPW & cleanliness drive</li>
-              <li><span class="bl-dot" style="background:#7A2E2E;"></span> Refreshments</li>
-            </ul>
-          </div>
-          <div class="budget-col">
-            <h4>How to contribute</h4>
-            <div class="pay-method">
-              <div class="pm-icon">💳</div>
-              <div>
-                <div class="pm-title">Online Bank Transfer</div>
-                <div class="pm-sub">Transfer to the Rl's account, then notify your RL with a screenshot.</div>
-              </div>
-            </div>
-            <div class="pay-method">
-              <div class="pm-icon">💵</div>
-              <div>
-                <div class="pm-title">Cash — RL Collection</div>
-                <div class="pm-sub">Your RL, collects it and record in excel</div>
-              </div>
-            </div>
-            <div class="pay-method">
-              <div class="pm-icon">📊</div>
-              <div>
-                <div class="pm-title">Expense Report</div>
-                <div class="pm-sub">Full income/expense report send to hostel group with screenshot and audited every semester by SSAIU.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CTA Banner -->
-      <div class="engage-cta">
-        <h3>Have something to say?</h3>
-        <p>Whether it's a small suggestion or a big idea, the SSO and RLs want to hear it.</p>
-        <div class="engage-cta-btns">
-          <a href="https://wa.me/97517348960" target="_blank" rel="noopener" class="btn-engage btn-engage-primary">💬 Message SSO on WhatsApp</a>
-          <button class="btn-engage btn-engage-ghost" data-tab="staff">Meet the leadership →</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ PROFILE (full page) ============ -->
 <section class="panel" id="panel-profile">
   <div class="wrap profile-wrap">
@@ -471,11 +398,12 @@
     <div class="wrap">
       <div class="section-head">
         <span class="kicker">Downloads</span>
-        <h2>Important Forms</h2>
-        <p>Common request and registration forms for students. Download, fill in, and submit to the DSA's office or SSO's office.</p>
+        <h2>Hostel Forms</h2>
+        <p>Common request and registration forms for Degree Hall 5 residents. Download, fill in, and submit to the SSO's office or your resident leader.</p>
       </div>
 
       <div class="facil-grid">
+        
         <a class="facil-card form-card" href="Student-Leave-Form.pdf" target="_blank" rel="noopener">
           <div class="ico">🧳</div>
           <h4>Student Leave Form</h4>
@@ -512,6 +440,7 @@
           <p>Request student character certification.</p>
           <span class="form-dl">Download PDF ↓</span>
         </a>
+  
       </div>
     </div>
   </div>
@@ -519,29 +448,65 @@
  
 <footer>
   <div class="foot-inner">
+
+    <!-- Top row -->
     <div class="foot-top">
-      <a href="https://www.sherubtse.edu.bt/" target="_blank" rel="noopener noreferrer" class="sherubtse-logo-link" aria-label="Visit Sherubtse College website">
-        <img src="image/logo.png" alt="Sherubtse College" class="sherubtse-logo">
+
+      <!-- Sherubtse Logo -->
+      <a
+        href="https://www.sherubtse.edu.bt/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="sherubtse-logo-link"
+        aria-label="Visit Sherubtse College website"
+      >
+        <img
+          src="image/logo.png"
+          alt="Sherubtse College"
+          class="sherubtse-logo"
+        >
       </a>
 
+      <!-- Footer Links -->
       <div class="foot-links">
-        <a href="Student-Handbook-2025-2026-non-Academic.pdf">Student Handbook</a>
-        <a href="RUB-Student-Code-of-Conduct-July-2022.pdf">Student Code of Conduct</a>
-        <a href="#" data-tab="forms">Forms</a>
-        <a href="https://campusconnect.sherubtse.edu.bt/">Campus Connect</a>
-        <a href="https://finalmap.sherubtse.edu.bt/" target="_blank" rel="noopener noreferrer">Campus Map</a>
+        <a href="Student-Handbook-2025-2026-non-Academic.pdf">
+          Student Handbook
+        </a>
+
+        <a href="RUB-Student-Code-of-Conduct-July-2022.pdf">
+          Student Code of Conduct
+        </a>
+
+        <a href="#" data-tab="forms">
+          Forms
+        </a>
+
+        <a href="https://campusconnect.sherubtse.edu.bt/">
+          Campus Connect
+        </a>
+
+        <a
+          href="https://finalmap.sherubtse.edu.bt/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Campus Map
+        </a>
       </div>
+
     </div>
 
+    <!-- Copyright -->
     <p class="copyright">
       &copy; 2026 Degree-Hall V. All rights reserved.
     </p>
+
   </div>
 </footer>
 
 <script>
   /* ---------- TAB SWITCHING ---------- */
-  let lastRealTab = 'home';
+  let lastRealTab = 'home'; // tracks last non-profile tab, for the profile "back" link
 
   function activateTab(tab, opts){
     opts = opts || {};
@@ -564,41 +529,69 @@
   });
 
   /* ---------- HERO VERTICAL SLIDESHOW ---------- */
-  const heroSlides = document.querySelectorAll("#hero-slideshow .hero-slide");
-  let heroIndex = 0;
-  const DISPLAY_TIME = 3000;
-  const SLIDE_TIME = 400;
 
-  function nextHeroSlide() {
-    const currentSlide = heroSlides[heroIndex];
-    const nextIndex = (heroIndex + 1) % heroSlides.length;
-    const nextSlide = heroSlides[nextIndex];
+const heroSlides = document.querySelectorAll(
+  "#hero-slideshow .hero-slide"
+);
 
-    nextSlide.classList.remove("active");
-    nextSlide.classList.remove("exiting");
-    nextSlide.style.transition = "none";
-    nextSlide.style.transform = "translateY(100%)";
-    nextSlide.offsetHeight;
+let heroIndex = 0;
 
-    currentSlide.classList.remove("active");
-    currentSlide.classList.add("exiting");
+const DISPLAY_TIME = 3000;
+const SLIDE_TIME = 400;
 
-    nextSlide.style.transition = `transform ${SLIDE_TIME}ms cubic-bezier(0.65, 0, 0.35, 1)`;
-    nextSlide.classList.add("active");
-    nextSlide.style.transform = "translateY(0)";
+function nextHeroSlide() {
 
-    setTimeout(() => {
-      currentSlide.classList.remove("exiting");
-      currentSlide.style.transform = "translateY(100%)";
-      currentSlide.style.transition = "";
-    }, SLIDE_TIME);
+  const currentSlide = heroSlides[heroIndex];
 
-    heroIndex = nextIndex;
-  }
+  const nextIndex =
+    (heroIndex + 1) % heroSlides.length;
 
-  if (heroSlides.length > 1) {
-    setInterval(nextHeroSlide, DISPLAY_TIME);
-  }
+  const nextSlide = heroSlides[nextIndex];
+
+  /* Put the next image directly below the current image */
+  nextSlide.classList.remove("active");
+  nextSlide.classList.remove("exiting");
+
+  nextSlide.style.transition = "none";
+  nextSlide.style.transform = "translateY(100%)";
+
+  /*
+   * Force the browser to register the starting position
+   * before starting the animation.
+   */
+  nextSlide.offsetHeight;
+
+  /* Current image slides UP */
+  currentSlide.classList.remove("active");
+  currentSlide.classList.add("exiting");
+
+  /* Next image slides UP into the frame */
+  nextSlide.style.transition =
+    `transform ${SLIDE_TIME}ms cubic-bezier(0.65, 0, 0.35, 1)`;
+
+  nextSlide.classList.add("active");
+  nextSlide.style.transform = "translateY(0)";
+
+  /* Clean up after animation */
+  setTimeout(() => {
+
+    currentSlide.classList.remove("exiting");
+
+    currentSlide.style.transform =
+      "translateY(100%)";
+
+    currentSlide.style.transition = "";
+
+  }, SLIDE_TIME);
+
+  heroIndex = nextIndex;
+}
+
+
+/* Start slideshow */
+if (heroSlides.length > 1) {
+  setInterval(nextHeroSlide, DISPLAY_TIME);
+}
 
   /* ---------- MEMBER DATA ---------- */
   const passions = ["Photography","Basketball","Reading","Painting","Football","Chess","Debate","Music","Coding","Hiking","Dance","Volleyball","Poetry","Robotics","Badminton","Singing","Cricket","Yoga","Baking","Sketching"];
@@ -620,11 +613,12 @@
     "Be the reason someone smiles today."
   ];
 
+  // Room-range colour bands, matching the four hostel blocks.
   const roomPalette = {
-    1:["#B8863B","#8C6529"],
-    2:["#4C6B52","#31473A"],
-    3:["#7A2E2E","#5A1F1F"],
-    4:["#5C4B7A","#3E3355"]
+    1:["#B8863B","#8C6529"], // Block 1 — Rooms 1–7
+    2:["#4C6B52","#31473A"], // Block 2 — Rooms 9–14
+    3:["#7A2E2E","#5A1F1F"], // Block 3 — Rooms 16–21
+    4:["#5C4B7A","#3E3355"]  // Block 4 — Rooms 23–29
   };
   function blockFor(room){
     const num = parseInt(room, 10);
@@ -648,6 +642,7 @@
     return waNumber ? `https://wa.me/${waNumber}` : '';
   }
 
+  // WhatsApp icon, linked to the resident's number. Returns '' when no number is on file.
   function whatsappIcon(waNumber){
     if(!waNumber) return '';
     return `<a class="wa-icon" href="${whatsappLink(waNumber)}" target="_blank" rel="noopener" title="Message on WhatsApp" onclick="event.stopPropagation();">
@@ -722,26 +717,79 @@
     { name:'Karma Choden', room:'29', course:'BSc in Physics', year:'Year 1', phone:'16139160', whatsapp:'97516139160', dob:'29 October 2006', passion:'Reading', quote:'You don’t have to earn rest; it belongs to you simply because you exist.' },
   ];
 
+  // 👇 REPLACE THESE WITH YOUR ACTUAL PHOTO PATHS, one per resident, in the SAME ORDER as the roster above.
+  // Examples: 'images/members/amelia.jpg', 'photos/john.png', 'https://example.com/student.jpg'
+  // If a path is missing or the image fails to load, that resident's generated avatar is shown instead.
   const realPhotos = [
-    'image/phakchok_dolma.jpeg','image/tshering_pelden.jpg','image/roma_ghalley.jpg','image/chhimi_om_doya.jpg',
-    'image/chimi_zangmo_norbu.jpg','image/tshering_choden.jpg','image/phuntsho_wangmo.jpg','image/dechen_shingdan.jpg',
-    'image/tshering_yangzom.jpg','image/nima_zangmo.jpg','image/tashi_wangmo.jpg','image/manisha_rai.jpg',
-    'image/sarita_subba.jpg','image/kalpana_rai.jpg','image/pema_wangmo_ls.jpg','image/pema_tshomo.jpg',
-    'image/tshering_yangchen.jpg','image/dorji_zangmo.jpg','image/tshewang_choden.jpg','image/pema_lhaden.jpg',
-    'image/tshelthrim_lhamo.jpeg','image/jigme_yozer_wangmo.jpeg','image/needha_zangmo.jpg','image/roshni_ghalley.jpg',
-    'image/tshering_tshomo.jpg','image/karma_yangdon.jpg','image/tshechi_lhamo.jpg','image/tashi_yangzom.jpg',
-    'image/diya_sharma.jpg','image/junu_tamang.jpg','image/deki_chedon.jpg','image/dawa_yangki.jpg',
-    'image/dechen_yuden.jpg','image/dawa_choden.jpg','image/karma_deki.jpg','image/sangay_chom.jpg',
-    'image/kinley_peldon.jpg','image/tshering_dechen.jpg','image/kuenzang_pema_yangsel.jpg','image/ngawang_tshering_dolkar.jpg',
-    'image/sonam_deki.jpeg','image/sonam_choeki.jpeg','image/passang.jpg','image/puja_mishra.jpg',
-    'image/yoezer_dema.jpg','image/tashi_deki.jpeg','image/sanjeta_rai.jpg','image/ngawang_choden.jpg',
-    'image/yangchen_lhamo.jpg','image/rigsel_yangki_dorji.jpg','image/thinley_zangmo.jpg','image/pema_wangmo_phy.jpg',
-    'image/kinley_lhaden.jpeg','image/dechen_dema.jpeg','image/pem_lham.jpeg','image/ugyen_choden.jpg',
-    'image/karma_yangchen_lhamo.jpeg','image/kezang_cheki.jpeg','image/kinzang_lhamo.jpeg','image/tshering_lhaden.jpg',
-    'image/passang_lhamo_lepcha.jpeg','image/sangeeta_chhetri.jpg','image/pema_yangki.jpg','image/karma_choden.jpg',
+    'image/phakchok_dolma.jpeg',  // Phakchok Dolma — Room 1
+    'image/tshering_pelden.jpg',  // Tshering Pelden — Room 2
+    'image/roma_ghalley.jpg',  // Roma Ghalley — Room 2
+    'image/chhimi_om_doya.jpg',  // Chhimi Om Doya — Room 2
+    'image/chimi_zangmo_norbu.jpg',  // Chimi Zangmo Norbu — Room 3
+    'image/tshering_choden.jpg',  // Tshering Choden — Room 3
+    'image/phuntsho_wangmo.jpg',  // Phuntsho Wangmo — Room 3
+    'image/dechen_shingdan.jpg',  // Dechen Shingdan — Room 4
+    'image/tshering_yangzom.jpg',  // Tshering Yangzom — Room 4
+    'image/nima_zangmo.jpg',  // Nima Zangmo — Room 5
+    'image/tashi_wangmo.jpg',  // Tashi Wangmo — Room 5
+    'image/manisha_rai.jpg',  // Manisha Rai — Room 6
+    'image/sarita_subba.jpg',  // Sarita Subba — Room 6
+    'image/kalpana_rai.jpg',  // Kalpana Rai — Room 6
+    'image/pema_wangmo_ls.jpg',  // Pema Wangmo — Room 7
+    'image/pema_tshomo.jpg',  // Pema Tshomo — Room 7
+    'image/tshering_yangchen.jpg',  // Tshering Yangchen — Room 7
+    'image/dorji_zangmo.jpg',  // Dorji Zangmo — Room 9
+    'image/tshewang_choden.jpg',  // Tshewang Choden — Room 9
+    'image/pema_lhaden.jpg',  // Pema Lhaden — Room 9
+    'image/tshelthrim_lhamo.jpeg',  // Tshelthrim Lhamo — Room 10
+    'image/jigme_yozer_wangmo.jpeg',  // Jigme Yozer Wangmo — Room 10
+    'image/needha_zangmo.jpg',  // Needha Zangmo — Room 11
+    'image/roshni_ghalley.jpg',  // Roshni Ghalley — Room 11
+    'image/tshering_tshomo.jpg',  // Tshering Tshomo — Room 11
+    'image/karma_yangdon.jpg',  // Karma Yangdon — Room 12
+    'image/tshechi_lhamo.jpg',  // Tshechi Lhamo — Room 12
+    'image/tashi_yangzom.jpg',  // Tashi Yangzom — Room 13
+    'image/diya_sharma.jpg',  // Diya Sharma — Room 13
+    'image/junu_tamang.jpg',  // Junu Tamang — Room 13
+    'image/deki_cheden.jpg',  // Deki Choden — Room 14
+    'image/dawa_yangki.jpg',  // Dawa Yangki — Room 14
+    'image/dechen_yuden.jpg',  // Dechen Yuden — Room 14
+    'image/dawa_choden.jpg',  // Dawa Choden — Room 16
+    'image/karma_deki.jpg',  // Karma Deki — Room 17
+    'image/sangay_chom.jpg',  // Sangay Chom — Room 17
+    'image/kinley_peldon.jpg',  // Kinley Peldon — Room 17
+    'image/tshering_dechen.jpg',  // Tshering Dechen — Room 18
+    'image/kuenzang_pema_yangsel.jpg',  // Kuenzang Pema Yangsel — Room 19
+    'image/ngawang_tshering_dolkar.jpg',  // Ngawang Tshering Dolkar — Room 19
+    'image/sonam_deki.jpeg',  // Sonam Deki — Room 20
+    'image/sonam_choeki.jpeg',  // Sonam Choeki — Room 20
+    'image/passang.jpg',  // Passang — Room 21
+    'image/puja_mishra.jpg',  // Puja Mishra — Room 21
+    'image/yoezer_dema.jpg',  // Yoezer Dema — Room 21
+    'image/tashi_deki.jpeg',  // Tashi Deki — Room 23
+    'image/sanjeta_rai.jpg',  // Sanjeta Rai — Room 23
+    'image/ngawang_choden.jpg',  // Ngawang Choden — Room 23
+    'image/yangchen_lhamo.jpg',  // Yangchen Lhamo — Room 24
+    'image/rigsel_yangki_dorji.jpg',  // Rigsel Yangki Dorji — Room 24
+    'image/thinley_zangmo.jpg',  // Thinley Zangmo — Room 25
+    'image/pema_wangmo_phy.jpg',  // Pema Wangmo — Room 25
+    'image/kinley_lhaden.jpeg',  // Kinley Lhaden — Room 26
+    'image/dechen_dema.jpeg',  // Dechen Dema — Room 26
+    'image/pem_lham.jpeg',  // Pem Lham — Room 26
+    'image/ugyen_choden.jpg',  // Ugyen Choden — Room 27
+    'image/karma_yangchen_lhamo.jpeg',  // Karma Yangchen Lhamo — Room 27
+    'image/kezang_cheki.jpeg',  // Kezang Cheki — Room 27
+    'image/kinzang_lhamo.jpeg',  // Kinzang Lhamo — Room 28
+    'image/tshering_lhaden.jpg',  // Tshering Lhaden — Room 28
+    'image/passang_lhamo_lepcha.jpeg',  // Passang Lhamo Lepcha — Room 28
+    'image/sangeeta_chhetri.jpg',  // Sangeeta Chhetri — Room 29
+    'image/pema_yangki.jpg',  // Pema Yangki — Room 29
+    'image/karma_choden.jpg',  // Karma Choden — Room 29
   ];
   members.forEach((mem, i) => { mem.photo = realPhotos[i] || ''; });
 
+  // Builds an <img> tag that tries the real photo first and silently falls back
+  // to the generated avatar if that photo is missing or fails to load.
   function photoImgTag(realSrc, fallbackSrc, alt, extraAttrs){
     const attrs = extraAttrs || '';
     return `<img ${attrs} src="${realSrc}" alt="${alt}" onerror="this.onerror=null;this.src='${fallbackSrc}';">`;
@@ -790,6 +838,15 @@
   }
 
   searchInput.addEventListener('input', render);
+  document.getElementById('floor-filters').addEventListener('click', (e)=>{
+    const btn = e.target.closest('.chip');
+    if(!btn) return;
+    activeBlock = btn.dataset.block;
+    document.querySelectorAll('#floor-filters .chip').forEach(c=>c.classList.remove('active'));
+    btn.classList.add('active');
+    render();
+  });
+
   render();
 
   /* ---------- CLICK-THROUGH PROFILES ---------- */
@@ -811,7 +868,7 @@
       <br>• Act as a liaison between students, faculty, and college management while maintaining student records and residence needs.
       <br>• Promote discipline, cleanliness, student participation, wellbeing, and a positive residential community.`
     },
-    tshering: {
+    alex: {
       name:"Tshering Om", initials:"TO", role:"Resident Leader", tag:"Leader",
       gradient:["#4C6B52","#31473A"],
       photo:"image/tshering_om.jpg",
@@ -829,7 +886,7 @@
       • Provide peer guidance and support, especially to new students, and help resolve minor conflicts.<br>
       • Assist the SSO in hostel management, improvement initiatives, budgeting, and disciplinary matters.`
     },
-    chimi: {
+    david: {
       name:"Chimi Lhamo Lama", initials:"CL", role:"Resident Leader", tag:"Leader",
       gradient:["#4C6B52","#31473A"],
       photo:"image/chimi.jpeg",
@@ -837,7 +894,7 @@
       fields:[
         ["Programme","BSc in Life Science"],
         ["Year","Year 3"],
-        ["B.o.B","23 July 2003"],
+        ["B.o.B","23 July 2003"], 
         ["Passion/Skills","Sightseeing"],
         ["Quote","Somewhere between dreams and deadlines: Powered by mess food!"]
       ],
@@ -857,81 +914,64 @@
     return `<div class="profile-field"><div class="f-label">Phone Number</div><div class="f-value mono phone-row">${contact.value} ${whatsappIcon(contact.whatsapp)}</div></div>`;
   }
 
-function openStaffProfile(id){
-  const p = staff[id];
-  if(!p) return;
-  document.getElementById('back-label').textContent = 'Back to Staff';
-
-  // Frame background: purple for SSO, moss-green for Leaders
-  const frameBg = (p.tag === 'Staff')
-    ? { c1:'#3d2589', c2:'#2a1766' }
-    : { c1:'#4C6B52', c2:'#31473A' };
-
-  document.getElementById('profile-content').innerHTML = `
-    <div class="profile-photo-frame" style="--frame-c1:${frameBg.c1}; --frame-c2:${frameBg.c2};">
-      <div class="profile-photo-inner">
-        ${photoImgTag(p.photo, avatarUrl(id, p.gradient[0], p.gradient[1]), p.name)}
-        <div class="profile-photo-badge">${p.tag}</div>
+  function openStaffProfile(id){
+    const p = staff[id];
+    if(!p) return;
+    document.getElementById('back-label').textContent = 'Back to Staff';
+    document.getElementById('profile-content').innerHTML = `
+      <div class="profile-photo" style="background:linear-gradient(150deg,${p.gradient[0]},${p.gradient[1]})">${photoImgTag(p.photo, avatarUrl(id, p.gradient[0], p.gradient[1]), p.name)}</div>
+      <div class="profile-details">
+        <div class="profile-header">
+          <h2>${p.name}</h2>
+          <div class="profile-role">${p.role}</div>
+          <span class="profile-tag">${p.tag}</span>
+        </div>
+        <div class="profile-grid">
+          ${p.fields.map(f => `<div class="profile-field"><div class="f-label">${f[0]}</div><div class="f-value">${f[1]}</div></div>`).join('')}
+          ${contactFieldHtml(p.contact)}
+        </div>
+        <div class="profile-note">${p.note}</div>
       </div>
-    </div>
-    <div class="profile-details">
-      <div class="profile-header">
-        <h2>${p.name}</h2>
-        <div class="profile-role">${p.role}</div>
-        <span class="profile-tag">${p.tag}</span>
-      </div>
-      <div class="profile-grid">
-        ${p.fields.map(f => `<div class="profile-field"><div class="f-label">${f[0]}</div><div class="f-value">${f[1]}</div></div>`).join('')}
-        ${contactFieldHtml(p.contact)}
-      </div>
-      <div class="profile-note">${p.note}</div>
-    </div>
-  `;
-  activateTab('profile');
-}
+    `;
+    activateTab('profile');
+  }
 
   document.getElementById('floor-filters').addEventListener('click', (e)=>{
   const btn = e.target.closest('.chip');
   if(!btn) return;
-  activeBlock = btn.dataset.floor;
+  activeBlock = btn.dataset.floor;   // was btn.dataset.block
   document.querySelectorAll('#floor-filters .chip').forEach(c=>c.classList.remove('active'));
   btn.classList.add('active');
   render();
 });
 
   function openMemberProfile(mem, idx){
-  const [c1,c2] = paletteFor(mem.room);
-  document.getElementById('back-label').textContent = 'Back to Members';
-
-  document.getElementById('profile-content').innerHTML = `
-    <div class="profile-photo-frame" style="--frame-c1:${c1}; --frame-c2:${c2};">
-      <div class="profile-photo-inner">
-        ${photoImgTag(mem.photo, avatarUrl(mem.name+'-'+mem.room+'-'+idx, c1, c2), mem.name)}
-        <div class="profile-photo-badge">Room ${mem.room}</div>
-      </div>
-    </div>
-    <div class="profile-details">
-      <div class="profile-header">
-        <h2>${mem.name}</h2>
-        <div class="profile-role">Resident</div>
-        <span class="profile-tag">Room ${mem.room}</span>
-      </div>
-      <div class="profile-grid">
-        <div class="profile-field"><div class="f-label">Course</div><div class="f-value">${mem.course}</div></div>
-        <div class="profile-field"><div class="f-label">Year</div><div class="f-value">${mem.year}</div></div>
-        <div class="profile-field"><div class="f-label">Date of Birth</div><div class="f-value mono">${mem.dob}</div></div>
-        <div class="profile-field"><div class="f-label">Room No.</div><div class="f-value mono">${mem.room}</div></div>
-        <div class="profile-field">
-          <div class="f-label">Phone Number</div>
-          <div class="f-value mono phone-row">${mem.phone || '—'} ${whatsappIcon(mem.whatsapp)}</div>
+    const [c1,c2] = paletteFor(mem.room);
+    document.getElementById('back-label').textContent = 'Back to Members';
+    document.getElementById('profile-content').innerHTML = `
+      <div class="profile-photo" style="background:linear-gradient(150deg,${c1},${c2})">${photoImgTag(mem.photo, avatarUrl(mem.name+'-'+mem.room+'-'+idx, c1, c2), mem.name)}</div>
+      <div class="profile-details">
+        <div class="profile-header">
+          <h2>${mem.name}</h2>
+          <div class="profile-role">Resident</div>
+          <span class="profile-tag">Room ${mem.room}</span>
         </div>
-        <div class="profile-field"><div class="f-label">Passion / Skills</div><div class="f-value">${mem.passion}</div></div>
+        <div class="profile-grid">
+          <div class="profile-field"><div class="f-label">Course</div><div class="f-value">${mem.course}</div></div>
+          <div class="profile-field"><div class="f-label">Year</div><div class="f-value">${mem.year}</div></div>
+          <div class="profile-field"><div class="f-label">Date of Birth</div><div class="f-value mono">${mem.dob}</div></div>
+          <div class="profile-field"><div class="f-label">Room No.</div><div class="f-value mono">${mem.room}</div></div>
+          <div class="profile-field">
+            <div class="f-label">Phone Number</div>
+            <div class="f-value mono phone-row">${mem.phone || '—'} ${whatsappIcon(mem.whatsapp)}</div>
+          </div>
+          <div class="profile-field"><div class="f-label">Passion / Skills</div><div class="f-value">${mem.passion}</div></div>
+        </div>
+        <div class="profile-note profile-quote">&ldquo;${mem.quote}&rdquo;</div>
       </div>
-      <div class="profile-note profile-quote">&ldquo;${mem.quote}&rdquo;</div>
-    </div>
-  `;
-  activateTab('profile');
-}
+      `;
+    activateTab('profile');
+  }
 
   document.querySelectorAll('.staff-card').forEach(card=>{
     card.addEventListener('click', ()=> openStaffProfile(card.dataset.staffId));
